@@ -57,6 +57,7 @@ body {
 
 /* Left panel section */
 body .left-panel{
+  z-index: 20;
 width: 20%;
 min-height: 100vh;
 position: fixed;
@@ -98,6 +99,13 @@ z-index: 2
   position: absolute;
   /*left: 50%;*/
   transform: translate(10%, 0);
+}
+.pro-coding-logo-mobile {
+  display: none;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 70px;
 }
 /*Конец шапки*/
 
@@ -159,7 +167,7 @@ body .right-panel {
 body .right-panel nav {
   background: none;
   box-shadow: none;
-  min-height: 128px;
+  min-height: 96px;
 }
 body .right-panel #nav-mobile {
   min-height: 128px;
@@ -173,6 +181,31 @@ body .right-panel #nav-mobile li a {
   margin-right: 10px;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0,2px,0,0.07); /* Параметры тени */
+}
+body .right-panel #nav-mobile li a.translation-li {
+  background: linear-gradient(45deg, #41295a, #2f0743);
+  color: white;
+}
+
+footer.page-footer{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: initial;
+  color: black;
+}
+footer.page-footer div.footer-copyright {
+  background-color: initial;
+  color: black;
+}
+.footer-right{
+  width: 70%;
+  margin-left: 25%;
+}
+.citata {
+  position: absolute;
+  float: left;
 }
 /* End Right panel section */
 
@@ -229,6 +262,9 @@ transform-style: preserve-3d;
   left: 15px;
   font-size: 32px;
   font-weight: 800;
+}
+.right-panel .tariffCards > div h3.big-text {
+  font-size: 28px;
 }
 .tariffCards > div h3 a{
   color: white;
@@ -323,3 +359,211 @@ transform-style: preserve-3d;
   transition: all 1.2s ease-in-out;
 }
 /* End Cards */
+
+
+/* Старт Адаптивка */
+
+@media (max-width: 600px){
+  body .left-panel {
+    display: none;
+  }
+  body .right-panel{
+    margin-left: 0;
+    width: 100%;
+    top: 0;
+  }
+  body .right-panel nav {
+    background: #2f0743;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #41295a, #2f0743);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #41295a, #2f0743); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 20px;
+    border-radius: 0 0 15px 15px;
+  }
+  .right-panel nav .nav-wrapper .pro-coding-logo-mobile{
+    display: block;
+  }
+  .right-panel .col.s12 > h3 {
+    text-align: center;
+  }
+  .right-panel .tariffCards {
+    padding-left: 10%;
+  }
+  .right-panel .tariffCards > div {
+    width: 90%;
+    height: 140px;
+  }
+  .right-panel .tariffCards > div h3 {
+    font-size: 24px;
+  }
+  .right-panel .tariffCards > div h3.big-text {
+    font-size: 22px;
+  }
+  .row div:nth-child(2) .tariffCards {
+    margin-bottom: 70px;
+  }
+  .right-panel .footer-right {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .right-panel .citata {
+    display: none;
+  }
+  footer.page-footer {
+    position: relative;
+    margin-top: 5vh;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 992px){
+  body .left-panel {
+    display: none;
+  }
+  body .right-panel{
+    margin-left: 0;
+    width: 100%;
+    top: 0;
+  }
+  body .right-panel nav {
+    background: #2f0743;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #41295a, #2f0743);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #41295a, #2f0743); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 20px;
+    border-radius: 0 0 15px 15px;
+  }
+  .right-panel nav .nav-wrapper .pro-coding-logo-mobile{
+    display: block;
+  }
+  .right-panel .tariffCards {
+    padding-left: 20%;
+  }
+  .right-panel .tariffCards > div {
+    width: 300px;
+    height: 140px;
+  }
+  .right-panel .tariffCards > div h3 {
+    font-size: 24px;
+  }
+  .right-panel .tariffCards > div h3.big-text {
+    font-size: 22px;
+  }
+  .right-panel .footer-right {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .right-panel .citata {
+    display: none;
+  }
+  footer.page-footer {
+    position: relative;
+    margin-top: 20vh;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px){
+  .left-panel .enum i.small {
+    font-size: 1.2rem;
+  }
+  .left-panel .enum.collection .collection-item {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .right-panel nav .nav-wrapper .left {
+    width: 50%;
+  }
+  .right-panel nav .nav-wrapper .right {
+    width: 40%;
+  }
+  .right-panel nav .nav-wrapper .right li{
+    margin-bottom: 10px;
+  }
+  .right-panel .tariffCards {
+    padding-left: 4%;
+  }
+  .right-panel .tariffCards > div {
+    width: 300px;
+    height: 140px;
+  }
+  .right-panel .tariffCards > div h3 {
+    font-size: 25px;
+  }
+  .right-panel .tariffCards > div h3.big-text {
+    font-size: 22px;
+  }
+  .right-panel .citata {
+    width: 50%;
+  }
+  .right-panel a.right{
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1700px){
+  .left-panel .enum i.small {
+    font-size: 1.3rem;
+  }
+  .left-panel .enum.collection .collection-item {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .right-panel nav .nav-wrapper .left {
+    width: 60%;
+  }
+  .right-panel nav .nav-wrapper .right {
+    width: 40%;
+  }
+  .right-panel nav .nav-wrapper .right li{
+    margin-bottom: 10px;
+  }
+  .right-panel .tariffCards {
+    padding-left: 4%;
+  }
+  .right-panel .tariffCards > div {
+    width: 340px;
+    height: 160px;
+  }
+  .right-panel .tariffCards > div h3 {
+    font-size: 28px;
+  }
+  .right-panel .tariffCards > div h3.big-text {
+    font-size: 25px;
+  }
+  .right-panel .citata {
+    width: 50%;
+  }
+  .right-panel a.right{
+    font-size: 14px;
+  }
+  .right-panel .footer-right {
+    line-height: 1.15;
+  }
+}
+
+/* Нестандартная адаптивка */
+@media only screen and (max-width: 770px) and (min-width: 600px){
+  .right-panel .tariffCards {
+    padding-left: 0%;
+  }
+  .right-panel .tariffCards > div {
+    width: 280px;
+    height: 150px;
+  }
+  .right-panel .tariffCards > div h3 {
+    font-size: 25px;
+  }
+  .right-panel .tariffCards > div h3.big-text {
+    font-size: 23px;
+  }
+}
+@media only screen and (max-height: 900px) {
+  .left-panel{
+    overflow: auto;
+    height: 100%;
+  }
+  .left-panel .end-section {
+    display: none;
+  }
+  footer.page-footer {
+    position: relative;
+    margin-top: 70px;
+  }
+}
+/* Конец Адаптивка */
