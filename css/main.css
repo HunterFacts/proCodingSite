@@ -187,7 +187,7 @@ body .right-panel #nav-mobile li a.translation-li {
   color: white;
 }
 
-footer.page-footer{
+.right-panel footer.page-footer{
   width: 100%;
   position: fixed;
   left: 0;
@@ -195,7 +195,7 @@ footer.page-footer{
   background-color: initial;
   color: black;
 }
-footer.page-footer div.footer-copyright {
+.right-panel footer.page-footer div.footer-copyright {
   background-color: initial;
   color: black;
 }
@@ -360,6 +360,39 @@ transform-style: preserve-3d;
 }
 /* End Cards */
 
+/* DarkNet styles */
+
+.darknet {
+  min-height: 100vh;
+  background-image: url('../img/backSpace.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.darknet nav {
+  height: 76px;
+  background-color: black;
+}
+.darknet nav li {
+  line-height: 75px;
+}
+.darknet nav li a:hover{
+  background-color: #263238;
+}
+.darknet  .logo-darknet {
+  height: 75px;
+  width: 212px;
+  background-color: black;
+  background-image: url('../img/darknet-logo.gif');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.darknet footer {
+  background-color: black;
+}
+.darknet #lifefilesAdaptive {
+
+}
+/* End DarkNet styles */
 
 /* Старт Адаптивка */
 
@@ -408,7 +441,7 @@ transform-style: preserve-3d;
   .right-panel .citata {
     display: none;
   }
-  footer.page-footer {
+  .right-panel footer.page-footer {
     position: relative;
     margin-top: 5vh;
   }
@@ -564,6 +597,24 @@ transform-style: preserve-3d;
   footer.page-footer {
     position: relative;
     margin-top: 70px;
+  }
+}
+@media only screen and (max-width: 480px){
+  .darknet #lifefilesAdaptive>thead>tr>th:nth-child(3){
+    display: none;
+  }
+  .darknet #lifefilesAdaptive>tbody>tr>td:nth-child(3){
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px){
+  .darknet #lifefilesAdaptive>thead>tr>th:nth-child(3),
+  .darknet #lifefilesAdaptive>thead>tr>th:nth-child(2){
+    display: none;
+  }
+  .darknet #lifefilesAdaptive>tbody>tr>td:nth-child(3),
+  .darknet #lifefilesAdaptive>tbody>tr>td:nth-child(2){
+    display: none;
   }
 }
 /* Конец Адаптивка */
